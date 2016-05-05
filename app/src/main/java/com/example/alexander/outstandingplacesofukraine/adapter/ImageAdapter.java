@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.alexander.outstandingplacesofukraine.R;
 import com.example.alexander.outstandingplacesofukraine.intents.OverviewActivity;
 import com.example.alexander.outstandingplacesofukraine.pojo.Places;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class ImageAdapter extends BaseAdapter {
 
-    private static Context context;
+    private Context context;
     private List<Places> places;
 
     private LayoutInflater inflater;
@@ -59,7 +60,10 @@ public class ImageAdapter extends BaseAdapter {
         View view = (View) convertView.findViewById(R.id.footer);
         TextView textView = (TextView) convertView.findViewById(R.id.name);
         final Places place = places.get(position);
-        Glide.with(context).load(place.getOverview().getPhoto()).into(imageView);
+        Glide.with(context)
+                .load(place.getOverview().getPhoto())
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(imageView);
 
         textView.setText(place.getName());
         imageView.setOnClickListener(new View.OnClickListener() {

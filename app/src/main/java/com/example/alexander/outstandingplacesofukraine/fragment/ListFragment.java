@@ -2,6 +2,7 @@ package com.example.alexander.outstandingplacesofukraine.fragment;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -35,13 +36,15 @@ public class ListFragment extends Fragment {
     private Context context;
     private ImageAdapter adapter;
     private Firebase firebase;
+    private String target;
+//    private String URL = "https://kievplaces.firebaseio.com/";
 
     public ListFragment() {
     }
 
-    public ListFragment(Context context, List<Places> places) {
+    public ListFragment(Context context, String target) {
         this.context = context;
-        this.places = new ArrayList<>();
+        this.target = target;
 
 
     }
@@ -49,7 +52,7 @@ public class ListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        firebase = new Firebase("https://kievplaces.firebaseio.com/outstpl");
+        firebase = new Firebase("https://kievplaces.firebaseio.com/" + target);
         View view = inflater.inflate(R.layout.list_fragment, container, false);
 
         final CircularProgressView circularProgressView = (CircularProgressView) view.findViewById(R.id.progress_view);

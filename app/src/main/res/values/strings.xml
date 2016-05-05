@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">UAPlaces</string>
+    <string name="app_name">KievPlaces</string>
     <string name="key">AIzaSyDmfkWpoVM0TLaCKJGSWAbzxKzFKZrMfsc</string>
+    <!--<string name="mainUrl">https://kievplaces.firebaseio.com</string>-->
 </resources>

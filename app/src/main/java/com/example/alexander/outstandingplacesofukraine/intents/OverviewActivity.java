@@ -11,6 +11,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -55,7 +56,7 @@ public class OverviewActivity extends AppCompatActivity {
 
         //-------------------
         Intent intent = getIntent();
-        byte[] byteArray = intent.getByteArrayExtra("image");
+
         String name = intent.getStringExtra("name");
         String info = intent.getStringExtra("info");
         final double latitude = intent.getDoubleExtra("latitude", 0);
