@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/error_connection"
+        android:id="@+id/imageView3"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/tryItNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to try again"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24sp"
+        android:textColor="#58c5ff"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Field Internet Connection"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="118dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="#77d0ff"
+        android:id="@+id/textView" />
+
+
+</RelativeLayout>

@@ -8,7 +8,7 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="300dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -50,22 +50,26 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="16dp">
+            android:paddingTop="11dp">
+
 
             <fragment
                 android:id="@+id/infoFragment"
+                class="com.example.alexander.outstandingplacesofukraine.fragment.InfoFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                class="com.example.alexander.outstandingplacesofukraine.fragment.InfoFragment" />
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
 
             <fragment
                 android:id="@+id/map"
+                class="com.google.android.gms.maps.MapFragment"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                class="com.google.android.gms.maps.MapFragment"
                 android:layout_below="@+id/infoFragment"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="19dp" />
+                android:layout_marginTop="9dp" />
 
         </RelativeLayout>
 

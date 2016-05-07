@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -64,6 +66,13 @@ public class ImageAdapter extends BaseAdapter {
                 .load(place.getOverview().getPhoto())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imageView);
+        String text = place.getName();
+
+        if (text.length() >= 22) {
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) textView.getLayoutParams();
+            params.setMargins(16, 6, 16, 0);
+            textView.setLayoutParams(params);
+        }
 
         textView.setText(place.getName());
         imageView.setOnClickListener(new View.OnClickListener() {
